@@ -216,7 +216,7 @@
         return `${this.month.getFormatted()}`
       },
       year () {
-        return `${this.month.getYear()}`
+        return `${this.month.getYear()}年`
       },
       weekDays () {
         return getWeekDays(this.locale, this.firstDayOfWeek)
