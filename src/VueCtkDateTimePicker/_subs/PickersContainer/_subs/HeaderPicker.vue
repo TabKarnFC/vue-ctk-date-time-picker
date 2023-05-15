@@ -139,10 +139,10 @@
         return date
       },
       year () {
-        return this.dateTime.format('YYYY')
+        return this.dateTime.format('YYYY年')
       },
       getDateFormatted () {
-        return this.dateTime.format('ddd D MMM')
+        return this.dateTime.format('MMM D日 ddd') // ex) 4月 7日 土
       },
       isFormatTwelve () {
         return this.format ? (this.format.indexOf('a') > -1) || (this.format.indexOf('A') > -1) : false

@@ -33,21 +33,6 @@
         >
           <TransitionGroup
             :name="transitionLabelName"
-            class="h-100 flex align-center flex-1 flex justify-content-right"
-          >
-            <CustomButton
-              v-for="m in [month]"
-              :key="m.month"
-              class="date-buttons lm-fs-16 padding-button flex-1"
-              :color="color"
-              :dark="dark"
-              @click="selectingYearMonth = 'month'"
-            >
-              {{ monthFormatted }}
-            </CustomButton>
-          </TransitionGroup>
-          <TransitionGroup
-            :name="transitionLabelName"
             class="h-100 flex align-center flex-1 flex"
           >
             <CustomButton
@@ -59,6 +44,21 @@
               @click="selectingYearMonth = 'year'"
             >
               {{ year }}
+            </CustomButton>
+          </TransitionGroup>
+          <TransitionGroup
+            :name="transitionLabelName"
+            class="h-100 flex align-center flex-1 flex justify-content-right"
+          >
+            <CustomButton
+              v-for="m in [month]"
+              :key="m.month"
+              class="date-buttons lm-fs-16 padding-button flex-1"
+              :color="color"
+              :dark="dark"
+              @click="selectingYearMonth = 'month'"
+            >
+              {{ monthFormatted }}
             </CustomButton>
           </TransitionGroup>
         </div>
@@ -216,7 +216,7 @@
         return `${this.month.getFormatted()}`
       },
       year () {
-        return `${this.month.getYear()}`
+        return `${this.month.getYear()}年`
       },
       weekDays () {
         return getWeekDays(this.locale, this.firstDayOfWeek)
