@@ -33,7 +33,6 @@
         >
           <TransitionGroup
             :name="transitionLabelName"
-<<<<<<< HEAD
             tag="span"
             class="h-100 flex align-center flex-1 flex justify-content-right"
           >
@@ -51,8 +50,6 @@
           <TransitionGroup
             :name="transitionLabelName"
             tag="span"
-=======
->>>>>>> f1cc3b7 (Feat/japanese localization (#2))
             class="h-100 flex align-center flex-1 flex"
           >
             <CustomButton
