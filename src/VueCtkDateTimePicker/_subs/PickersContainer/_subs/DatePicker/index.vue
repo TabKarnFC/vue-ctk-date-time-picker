@@ -65,6 +65,7 @@
           </TransitionGroup>
           <TransitionGroup
             :name="transitionLabelName"
+            tag="span"
             class="h-100 flex align-center flex-1 flex justify-content-right"
           >
             <CustomButton
